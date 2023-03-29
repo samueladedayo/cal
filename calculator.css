@@ -1,0 +1,14 @@
+.ade {
+    background-image: linear-gradient(to right top, red 50%, whitesmoke 50%);
+    border: none;
+    border-radius: 10px;
+    width: 30%;
+    height: 450%;
+    box-shadow: 2px 3px 2px 4px grey;
+}
+
+@media (max-width:600px) {
+    .ade {
+        width: 100%;
+    }
+}

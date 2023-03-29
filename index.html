@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./calculator.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <center>
+        <nav class="ade">
+
+            <div class="grade">
+                <h1 style="text-align: center;">GRADING SYSTEM</h1>
+                <div class="enter">
+                    <input type="text" placeholder=" Enter your score..." style="height: 7vh; background-color: whitesmoke; border-radius: 10px; width: 55%; " id="scoreInput">
+                </div>
+                <button style="background-color: blue; margin-top: 10px; color: white; padding: 20px; height: 40px; border-radius: 10px" onclick="grade()">GRADE</button>
+                <P id="result" style="font-size: 50pt; text-align: center;"></P>
+                <h1 style="text-align: center; color: rgb(17, 182, 182) ;margin-top: 100px;">GRADING SYSTEM RESULT <br>
+                    <h1 style="text-align: center; color: lawngreen;">IF YOU KNOW YOUR SCORE IS TOO LOW</h1>
+                </h1>
+                <h1 style="text-align: center; color: rgb(238, 172, 5);"> DON'T BOLDER YOUR SELF TO CHECK IT OO </h1>
+            </div>
+        </nav>
+    </center>
+    <script>
+        var name = "samuel";
+        var age = 20;
+
+
+        function grade() {
+            var scores = scoreInput.value;
+            if (scores < 0) {
+                result.innerText = " INVALID"
+                result.style.color = "yellow";
+            } else if (scores <= 39) {
+                result.innerText = 'FAILED'
+                result.style.color = "red" && "opacity:0.5;"
+            } else if (scores <= 50) {
+                result.innerText = 'AVERAGE'
+                result.style.color = "purple"
+            } else if (scores <= 69) {
+                result.innerText = 'GOOD'
+                result.style.color = "green"
+            } else if (scores >= 70 && scores <= 100) {
+                result.innerText = 'EXCELLENT'
+                result.style.color = "orange"
+            } else if (scores > 100) {
+                result.innerText = "INVALID"
+                result.style.color = "aqua"
+            }
+            if (scores == A) {
+                result.innerText = "THIS IS A LETTER";
+                result.style.color = "red";
+            }
+        }
+    </script>
+</body>
+
+</html>
